@@ -13,16 +13,24 @@ Elena Gjurevska 215082
    -name='apple',barcode='123a47',discount='',payment='300',price='300'
    
    -name='apple',barcode='012347',discount='5',payment='1000',price='600'
-   
-5. Поради тоа што имаме еден услов со 3 подуслови со формулата 2^3=8 ни требаат 8 test cases
-   
-if (item.getPrice() > 300 && item.getDiscount() > 0 && item.getBarcode().charAt(0)== '0')
 
-  -barcode='012347',discount='5',payment='1000',price='600'
+  5. Поради тоа што имаме еден услов со 3 подуслови со формулата 2^3=8 ни требаат 8 test cases
+   
+   if (item.getPrice() > 300 && item.getDiscount() > 0 && item.getBarcode().charAt(0)== '0')
+
+  -price='600',discount='10',barcode='012347'
   
-  -barcode='12347',discount='10',payment='300',price='310'
+  -price='600',discount='10',barcode='12347'
   
-  Ние треба да имаме 8 теста но бидејки во if подусловите ни се поврзани со И според кое ако било кој од подусловите не е точен тогаш if-от нема да биде извршен.
+  -price='600',discount='0',barcode='012347'
+  
+  -price='600',discount='0',barcode='12347'
+  
+  -price='200',discount='10',barcode='012347'
+  
+  -price='200',discount='10',barcode='12347'
+  
+Ние треба да имаме 8 теста но бидејки во if подусловите ни се поврзани со И според кое ако било кој од подусловите не е точен  тогаш  повлекува целот if да не биде извршен.
 
   
   
